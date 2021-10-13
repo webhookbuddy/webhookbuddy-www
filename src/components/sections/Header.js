@@ -30,16 +30,25 @@ const Header = () => (
               <Img fluid={data.art_build.childImageSharp.fluid} />
             </Art>
             <Text>
-              <h1>
-                Fast in
+              <h2>
+                If you're a{' '}
+                <span className="highlight">software developer</span>,
                 <br />
-                every way
+                and you use <span className="highlight">webhooks</span>,
                 <br />
-                that matters
-              </h1>
+                on your <span className="highlight">local dev server</span>,
+                <br />
+                then <strong>Webhook Buddy</strong> is your friend!
+                <br />
+              </h2>
               <br />
               <p>
-                <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
+                <StyledExternalLink href="https://github.com/webhookbuddy/webhookbuddy">
+                  Download now &nbsp;&#x2794;
+                </StyledExternalLink>
+              </p>
+              <p>
+                <StyledExternalLink href="https://github.com/webhookbuddy/webhookbuddy">
                   Check out source &nbsp;&#x2794;
                 </StyledExternalLink>
               </p>
@@ -76,7 +85,7 @@ const Art = styled.figure`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
   align-items: center;
   grid-gap: 64px;
 
@@ -95,6 +104,14 @@ const Text = styled.div`
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: start;
+  }
+
+  .highlight {
+    color: ${props => props.theme.color.highlight};
+  }
+
+  p {
+    margin: 16px 0;
   }
 `;
 
